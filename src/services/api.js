@@ -9,7 +9,7 @@ export const login = (data) => API.post('/auth/login', data);
 
 export const getTasks = async (token) => {
   try {
-    const response = await axios.get('http://localhost:5000/api/tasks', {
+    const response = await axios.get('https://taskmanagerwithauthbackend.onrender.com/tasks', {
       headers: {
         Authorization: `Bearer ${token}` // Ensure the token is being passed correctly
       }
@@ -22,7 +22,7 @@ export const getTasks = async (token) => {
 };
 
 export const createTask = (taskData, token) => {
-  return axios.post('http://localhost:5000/api/tasks', taskData, {
+  return axios.post(https://taskmanagerwithauthbackend.onrender.com/tasks', taskData, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
