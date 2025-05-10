@@ -4,7 +4,7 @@ let socket;
 
 export const initializeSocket = () => {
   if (!socket) {
-    socket = io('http://localhost:5000'); // Adjust URL if deployed
+    socket = io('https://taskmanagerwithauthbackend.onrender.com'); // Adjust URL if deployed
   }
   return socket;
 };
