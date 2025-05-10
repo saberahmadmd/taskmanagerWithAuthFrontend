@@ -1,10 +1,7 @@
-import { io } from 'socket.io-client';
-
-let socket;
-
 export const initializeSocket = () => {
   if (!socket) {
-    socket = io('https://taskmanagerwithauthbackend.onrender.com'); // Adjust URL if deployed
+    const socketUrl = process.env.REACT_APP_SOCKET_URL || 'http://localhost:5000';
+    socket = io(socketUrl);
   }
   return socket;
 };
